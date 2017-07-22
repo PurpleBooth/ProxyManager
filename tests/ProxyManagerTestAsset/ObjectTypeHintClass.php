@@ -20,29 +20,21 @@ declare(strict_types=1);
 
 namespace ProxyManagerTestAsset;
 
-interface ReturnTypeHintedInterface
+/**
+ * Class with a object type hint in a method - used to test iterable type hint generation
+ *
+ * @author Marco Pivetta <ocramius@gmail.com>
+ * @license MIT
+ */
+class ObjectTypeHintClass
 {
-    public function returnString() : string;
-
-    public function returnInteger() : int;
-
-    public function returnBool() : bool;
-
-    public function returnFloat() : float;
-
-    public function returnArray() : array;
-
-    public function returnCallable() : callable;
-
-    public function returnSelf() : self;
-
-    public function returnIterable() : iterable;
-
-    public function returnObject() : object;
-
-    public function returnVoid() : void;
-
-    public function returnSameClass() : ReturnTypeHintedInterface;
-
-    public function returnOtherClass() : EmptyClass;
+    /**
+     * @param object $parameter
+     *
+     * @return object
+     */
+    public function iterableTypeHintMethod(object $parameter)
+    {
+        return $parameter;
+    }
 }

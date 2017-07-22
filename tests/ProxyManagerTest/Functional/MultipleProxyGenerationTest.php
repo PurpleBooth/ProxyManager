@@ -46,6 +46,7 @@ use ProxyManagerTestAsset\ClassWithSelfHint;
 use ProxyManagerTestAsset\EmptyClass;
 use ProxyManagerTestAsset\HydratedObject;
 use ProxyManagerTestAsset\IterableTypeHintClass;
+use ProxyManagerTestAsset\ObjectTypeHintClass;
 use ProxyManagerTestAsset\ReturnTypeHintedClass;
 use ProxyManagerTestAsset\ScalarTypeHintedClass;
 use ProxyManagerTestAsset\VoidMethodTypeHintedClass;
@@ -135,6 +136,7 @@ class MultipleProxyGenerationTest extends PHPUnit_Framework_TestCase
             [ClassWithMethodWithByRefVariadicFunction::class],
             [ScalarTypeHintedClass::class],
             [IterableTypeHintClass::class],
+            [ObjectTypeHintClass::class],
             [ReturnTypeHintedClass::class],
             [VoidMethodTypeHintedClass::class],
         ];
